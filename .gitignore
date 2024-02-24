@@ -1,3 +1,7 @@
+# ignore artifacts/fata_ingestion/test folder
+data_ingestion/test/*
+data_ingestion/train/*
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
