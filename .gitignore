@@ -1,6 +1,5 @@
-# ignore artifacts/data_ingestion/
-data_ingestion/test/*
-data_ingestion/train/*
+# ignore artifacts/* to not commit the artifacts
+artifacts/*
 
 # ignore zip files
 *.zip
