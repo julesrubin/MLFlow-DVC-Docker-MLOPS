@@ -1,6 +1,9 @@
-# ignore artifacts/fata_ingestion/test folder
+# ignore artifacts/data_ingestion/
 data_ingestion/test/*
 data_ingestion/train/*
+
+# ignore zip files
+*.zip
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
