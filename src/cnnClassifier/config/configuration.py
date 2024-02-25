@@ -74,7 +74,7 @@ class ConfigurationManager:
     
     def get_evaluation_config(self) -> EvaluationConfig:
         eval_config = EvaluationConfig(
-            path_of_model = "artifacts/training/model.h5",
+            path_of_model = "models/model.h5",
             training_data = "artifacts/data_ingestion/temp",
             mlflow_uri = "https://dagshub.com/Pernam75/MLFlow-DVC-Docker-MLOPS.mlflow",
             all_params = self.params,
