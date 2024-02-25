@@ -54,7 +54,7 @@ class ConfigurationManager:
         training = self.config.training
         prepare_base_model = self.config.prepare_base_model
         params = self.params
-        training_data = os.path.join(self.config.data_ingestion.unzip_dir, "train")
+        training_data = os.path.join(self.config.data_ingestion.unzip_dir, "temp")
         create_directories([
             Path(training.root_dir)
         ])
@@ -74,7 +74,7 @@ class ConfigurationManager:
     
     def get_evaluation_config(self) -> EvaluationConfig:
         eval_config = EvaluationConfig(
-            path_of_model = "artifacts/training/model.h5",
+            path_of_model = "models/model.h5",
             training_data = "artifacts/data_ingestion/temp",
             mlflow_uri = "https://dagshub.com/Pernam75/MLFlow-DVC-Docker-MLOPS.mlflow",
             all_params = self.params,

@@ -1,6 +1,11 @@
 from cnnClassifier.config.configuration import ConfigurationManager
 from cnnClassifier.components.model_evaluation_mlflow import Evaluation
 from cnnClassifier import logger
+import os
+
+os.environ['MLFLOW_TRACKING_URI'] = 'https://dagshub.com/Pernam75/MLFlow-DVC-Docker-MLOPS.mlflow'
+os.environ['MLFLOW_TRACKING_USERNAME'] = 'Pernam75'
+os.environ['MLFLOW_TRACKING_PASSWORD'] = '1e699d26f03e9c945b5485e741b464a017b391ad'
 
 STAGE_NAME = "Model Evaluation"
 

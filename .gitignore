@@ -1,3 +1,6 @@
+# ignore inputImage.jpg
+inputImage.jpg
+
 # ignore artifacts/* to not commit the artifacts
 artifacts/*
 

@@ -83,3 +83,4 @@ class Training:
             path=self.config.trained_model_path,
             model=self.model
         )
+        print(f"Model trained and saved at {self.config.trained_model_path}")
