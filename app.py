@@ -3,6 +3,8 @@ import os
 from flask_cors import CORS, cross_origin
 from cnnClassifier.utils.common import decodeImage
 from cnnClassifier.pipeline.prediction import PredictionPipeline
+from cnnClassifier.pipeline.scrapper import ScrapperPipeline
+
 
 os.putenv('LANG', 'en_US.UTF-8')
 os.putenv('LC_ALL', 'en_US.UTF-8')
@@ -34,6 +36,16 @@ def predictRoute():
     decodeImage(image, clApp.filename)
     result = clApp.classifier.predict()
     return jsonify(result)
+
+@app.route("/fetch_new_data", methods=['GET'])
+@cross_origin()
+def fetch_new_data():
+    try:
+        pipeline = ScrapperPipeline()
+        pipeline.main()
+    except Exception as e:
+        raise e
+    
 
 if __name__ == "__main__":
     clApp = ClientApp()

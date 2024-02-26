@@ -15,3 +15,8 @@ prepare_base_model:
 training:
   root_dir: models
   trained_model_path: models/model.h5
+
+data_scraping:
+  source_real_URL: 'https://www.freepik.com/authentic-photos'
+  source_fake_URL: 'https://www.freepik.com/ai/images'
+  zip_file: artifacts/data_ingestion/temp

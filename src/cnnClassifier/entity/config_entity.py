@@ -39,3 +39,9 @@ class EvaluationConfig:
     mlflow_uri: str
     params_image_size: list
     params_batch_size: int
+
+@dataclass(frozen=True)
+class DataScrapingConfig:
+    source_real_URL: str
+    source_fake_URL: str
+    zip_file: Path

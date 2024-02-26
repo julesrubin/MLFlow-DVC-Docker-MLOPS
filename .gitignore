@@ -1,6 +1,9 @@
 # ignore inputImage.jpg
 inputImage.jpg
 
+# ignore .conda
+.conda
+
 # ignore artifacts/* to not commit the artifacts
 artifacts/*
 
