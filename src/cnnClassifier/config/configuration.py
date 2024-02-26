@@ -3,7 +3,8 @@ from cnnClassifier.utils.common import read_yaml, create_directories
 from cnnClassifier.entity.config_entity import (DataIngestionConfig, 
                                                 PrepareBaseModelConfig, 
                                                 TrainingConfig, 
-                                                EvaluationConfig)
+                                                EvaluationConfig,
+                                                DataScrapingConfig)
 import os
 class ConfigurationManager:
     def __init__(
@@ -82,3 +83,12 @@ class ConfigurationManager:
             params_batch_size = self.params.BATCH_SIZE
         )
         return eval_config
+    
+    def get_data_scraping_config(self):
+        config = self.config.data_scraping
+        data_scraping_config = DataScrapingConfig(
+            source_real_URL=config.source_real_URL,
+            source_fake_URL=config.source_fake_URL,
+            zip_file=config.zip_file
+        )
+        return data_scraping_config
